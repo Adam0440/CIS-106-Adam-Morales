@@ -1,1 +1,7 @@
+print (" Enter quanity of item")
+amount= float(input())
+print (" Enter price of item")
+price= float(input())
+cost= amount*price
+print ("The cost is" + str(cost))
 
