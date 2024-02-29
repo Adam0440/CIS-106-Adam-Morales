@@ -1,0 +1,8 @@
+print ("Insert last name")
+name= str(input())
+print ("Insert Hourly Wage")
+wage= float(input())
+print ("Insert hours worked")
+hours= float(input())
+gross_pay= wage*hours
+print (str(name) + "The gross pay is" + str(gross_pay))
