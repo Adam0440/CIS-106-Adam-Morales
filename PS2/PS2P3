@@ -1,0 +1,8 @@
+print ("Insert Length")
+Length = input()
+Length = float(Length)  
+print ("Insert Width")
+Width = input()
+Width = float(Width)  
+print ("The Area of the rectangle is" + str(Length * Width))
+print ("The circumference of the rectangle is" + str((2 * Length + 2 * Width)))
