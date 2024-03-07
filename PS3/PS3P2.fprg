@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-07 05:25:44 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTBPQjIzSVM7MjAyNC0wMy0wNzswNToxOToxOSBQTTszMzEy"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTBPQjIzSVM7MjAyNC0wMy0wNzswNToyNTo0NCBQTTsxOzM0MTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Name" type="String" array="False" size=""/>
+            <declare name="midterm, final, points" type="Real" array="False" size=""/>
+            <input variable="Name"/>
+            <input variable="final"/>
+            <input variable="midterm"/>
+            <assign variable="points" expression="final + midterm"/>
+            <output expression="&quot;The total points for,&quot; &amp; Name &amp; &quot;will be&quot; &amp; points" newline="False"/>
+        </body>
+    </function>
+</flowgorithm>
