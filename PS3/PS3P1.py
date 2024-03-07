@@ -1,1 +1,7 @@
-
+print("Insert stock ticker")
+ticker = str(input())
+print("Insert stock price")
+price = float(input())
+print("Insert number of shares")
+shares = float(input())
+print("Amount incested is", "$" "{:.2F}" .format(price * shares) + " in " + ticker)
