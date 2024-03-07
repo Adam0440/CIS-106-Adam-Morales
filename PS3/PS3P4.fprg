@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-07 05:39:34 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTBPQjIzSVM7MjAyNC0wMy0wNzswNTozMjoyNyBQTTszMzA2"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTBPQjIzSVM7MjAyNC0wMy0wNzswNTozOTozNCBQTTsxOzM0MTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="make, model" type="String" array="False" size=""/>
+            <declare name="msrp, discount, final" type="Real" array="False" size=""/>
+            <input variable="make"/>
+            <input variable="model"/>
+            <input variable="msrp"/>
+            <input variable="discount"/>
+            <assign variable="final" expression="msrp-(msrp*discount)"/>
+            <output expression="&quot;The MSRP is, &quot;&amp;msrp&amp;&quot; the discount is &quot;&amp;discount&amp;&quot; The final price of the, &quot;&amp;make&amp;&quot; &quot;&amp;model&amp;&quot; will be &quot;&amp;final" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
