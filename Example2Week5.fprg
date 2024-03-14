@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-13 07:52:28 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVROQjRFMFI7MjAyNC0wMy0xMzswNzo0NTowMiBQTTszMzMx"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVROQjRFMFI7MjAyNC0wMy0xMzswNzo1MjoyOCBQTTsxOzM0NDU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="prodcode" type="String" array="False" size=""/>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="unitprice" type="Real" array="False" size=""/>
+            <declare name="discount" type="Real" array="False" size=""/>
+            <declare name="extprice" type="Real" array="False" size=""/>
+            <declare name="discextprice" type="Real" array="False" size=""/>
+            <input variable="qty"/>
+            <input variable="unitprice"/>
+            <input variable="prodcode"/>
+            <assign variable="extprice" expression="qty*unitprice"/>
+            <if expression="prodcode==&quot;A&quot;">
+                <then>
+                    <assign variable="discount" expression="extprice*0.10"/>
+                </then>
+                <else>
+                    <assign variable="discount" expression="extprice*0.05"/>
+                </else>
+            </if>
+            <assign variable="discextprice" expression="extprice-discount"/>
+            <output expression="&quot;Extended price is&quot; &amp; extprice" newline="True"/>
+            <output expression="&quot;Discount amount is &quot; &amp; discount" newline="True"/>
+            <output expression="&quot;Discounted price is&quot; &amp; discextprice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
