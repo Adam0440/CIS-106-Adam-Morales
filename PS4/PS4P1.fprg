@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-14 04:41:44 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUJRUFE3SzU7MjAyNC0wMy0xNDswNDozNjozMiBQTTszMzQ0"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUJRUFE3SzU7MjAyNC0wMy0xNDswNDo0MTo0NCBQTTsyOzM0NTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="test1, test2, final" type="Real" array="False" size=""/>
+            <input variable="test1"/>
+            <input variable="test2"/>
+            <assign variable="final" expression="(test1*0.6)+(test2*0.4)"/>
+            <output expression="&quot;The final score is, &quot;&amp;final&amp;&quot;%&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
