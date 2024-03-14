@@ -1,0 +1,6 @@
+name = input("Enter your business name:")
+fixed = float(input("Enter the fixed cost of the business:"))
+price = float(input("Enter the price per unit: $"))
+cost = float(input("Enter the cost per unit: $"))
+break_even = fixed/(price-cost)
+print("The break even point for", name, f"is {break_even:.2f} units.")
