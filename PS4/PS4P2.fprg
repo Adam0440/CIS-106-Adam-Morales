@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-14 04:46:49 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUJRUFE3SzU7MjAyNC0wMy0xNDswNDo0MjoyNyBQTTszMzQ1"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUJRUFE3SzU7MjAyNC0wMy0xNDswNDo0Njo0OSBQTTsxOzM0NjE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="purchase, current, quantity, newvalue" type="Real" array="False" size=""/>
+            <input variable="purchase"/>
+            <input variable="current"/>
+            <input variable="quantity"/>
+            <assign variable="newvalue" expression="(current-purchase)*quantity"/>
+            <output expression="&quot;The stock has shifted to, $&quot;&amp;newvalue" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
