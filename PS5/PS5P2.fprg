@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-21 11:03:07 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUZDQ1FNMkI7MjAyNC0wMy0yMTsxMDo1NDozMyBBTTszMzEy"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUZDQ1FNMkI7MjAyNC0wMy0yMTsxMTowMzowNyBBTTsxOzM0MTY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qty, unitprice, extprice" type="Real" array="False" size=""/>
+            <declare name="item" type="String" array="False" size=""/>
+            <input variable="qty"/>
+            <input variable="item"/>
+            <if expression="item = &quot;A&quot;">
+                <then>
+                    <assign variable="unitprice" expression="10"/>
+                </then>
+                <else>
+                    <assign variable="unitprice" expression="20"/>
+                </else>
+            </if>
+            <assign variable="extprice" expression="qty*unitprice"/>
+            <output expression="&quot;The item is, &quot;&amp;item&amp;&quot; The quantity is, &quot;&amp;qty&amp;&quot; The unit price is, $&quot;&amp;unitprice&amp;&quot; The extended price is, $&quot;&amp;extprice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
