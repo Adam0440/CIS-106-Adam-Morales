@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-21 11:19:25 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUZDQ1FNMkI7MjAyNC0wMy0yMTsxMToxMjoxMiBBTTszMzA0"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUZDQ1FNMkI7MjAyNC0wMy0yMTsxMToxOToyNSBBTTsxOzM0MjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="price, warranty, total" type="Real" array="False" size=""/>
+            <input variable="name"/>
+            <input variable="price"/>
+            <if expression="price&gt;1000">
+                <then>
+                    <assign variable="warranty" expression="0.1*price"/>
+                </then>
+                <else>
+                    <assign variable="warranty" expression="0.05*price"/>
+                </else>
+            </if>
+            <assign variable="total" expression="warranty+price"/>
+            <output expression="&quot;The appliance, &quot;&amp;name&amp;&quot; costs, $&quot;&amp;price&amp;&quot; will cause the warranty to be, $&quot;&amp;warranty&amp;&quot; The final total will be, $&quot;&amp;total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
