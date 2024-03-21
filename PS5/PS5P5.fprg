@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-21 11:39:38 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUZDQ1FNMkI7MjAyNC0wMy0yMTsxMToxOTo1OSBBTTszMzIy"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUZDQ1FNMkI7MjAyNC0wMy0yMTsxMTozOTozOCBBTTsxOzM0Mjk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="dependants, gross, adjusted, tax, incometax" type="Real" array="False" size=""/>
+            <input variable="name"/>
+            <input variable="dependants"/>
+            <input variable="gross"/>
+            <assign variable="adjusted" expression="gross-(dependants*1200)"/>
+            <if expression="adjusted&gt;50000">
+                <then>
+                    <assign variable="tax" expression="0.2"/>
+                </then>
+                <else>
+                    <assign variable="tax" expression="0.1"/>
+                </else>
+            </if>
+            <assign variable="incometax" expression="adjusted*tax"/>
+            <if expression="incometax&lt;0">
+                <then>
+                    <assign variable="incometax" expression="100"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="name&amp;&quot; has, &quot;&amp;dependants&amp;&quot; dependants, their gross income is, $&quot;&amp;gross&amp;&quot;. The adjusted income is, $&quot;&amp;adjusted&amp;&quot; The income tax will be, $&quot;&amp;incometax" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
