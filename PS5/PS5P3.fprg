@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-21 11:11:39 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUZDQ1FNMkI7MjAyNC0wMy0yMTsxMTowMzo0NCBBTTszMzA5"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUZDQ1FNMkI7MjAyNC0wMy0yMTsxMToxMTozOSBBTTsxOzM0MjA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="books, price, total, shipping, final" type="Real" array="False" size=""/>
+            <input variable="books"/>
+            <input variable="price"/>
+            <assign variable="total" expression="price*books"/>
+            <if expression="total&gt;50">
+                <then>
+                    <assign variable="shipping" expression="0"/>
+                </then>
+                <else>
+                    <assign variable="shipping" expression="25"/>
+                </else>
+            </if>
+            <assign variable="final" expression="shipping+total"/>
+            <output expression="&quot;The order total is, $&quot;&amp;total&amp;&quot; The shipping will be, $&quot;&amp;shipping&amp;&quot;The final price will be, $&quot;&amp;final" newline="False"/>
+        </body>
+    </function>
+</flowgorithm>
