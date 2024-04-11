@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-11 02:01:11 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlHVkFOODc7MjAyNC0wNC0xMTswMTo1Mjo1NyBQTTszMzM3"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlHVkFOODc7MjAyNC0wNC0xMTswMjowMToxMSBQTTsxOzM0MzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="control" type="String" array="False" size=""/>
+            <declare name="qty, p, ext, disc, total, totaldisc" type="Real" array="False" size=""/>
+            <assign variable="totaldisc" expression="0"/>
+            <input variable="control"/>
+            <while expression="control = &quot;Yes&quot;">
+                <input variable="qty"/>
+                <input variable="p"/>
+                <assign variable="ext" expression="qty*p"/>
+                <if expression="ext&gt;10000">
+                    <then>
+                        <assign variable="disc" expression="ext*0.25"/>
+                    </then>
+                    <else>
+                        <assign variable="disc" expression="ext*0.10"/>
+                    </else>
+                </if>
+                <assign variable="total" expression="ext-disc"/>
+                <output expression="&quot;The extended price is, $&quot;&amp;ext&amp;&quot; The discount is, $&quot;&amp;disc&amp;&quot; the total is, $&quot;&amp;total" newline="True"/>
+                <assign variable="totaldisc" expression="totaldisc+disc"/>
+                <input variable="control"/>
+            </while>
+            <output expression="&quot;The total of discounts given out is, $&quot;&amp;totaldisc" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
