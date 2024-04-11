@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-11 01:48:04 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlHVkFOODc7MjAyNC0wNC0xMTswMToyNTowOCBQTTszMzMz"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlHVkFOODc7MjAyNC0wNC0xMTswMTo0ODowNCBQTTsyOzM0NDM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name, control" type="String" array="False" size=""/>
+            <declare name="hours, pay, totalpay, numberofemp, payrate" type="Real" array="False" size=""/>
+            <assign variable="numberofemp" expression="0"/>
+            <assign variable="totalpay" expression="0"/>
+            <input variable="control"/>
+            <while expression="control = &quot;yes&quot;">
+                <input variable="name"/>
+                <input variable="hours"/>
+                <input variable="payrate"/>
+                <if expression="hours&lt;=40">
+                    <then>
+                        <assign variable="pay" expression="hours*payrate"/>
+                    </then>
+                    <else>
+                        <assign variable="pay" expression="40*payrate+(hours-40)*1.5*payrate"/>
+                    </else>
+                </if>
+                <output expression="&quot;Weekly pay for, &quot;&amp;name&amp;&quot; is, $&quot;&amp;pay" newline="True"/>
+                <assign variable="totalpay" expression="totalpay+pay"/>
+                <assign variable="numberofemp" expression="numberofemp+1"/>
+                <input variable="control"/>
+            </while>
+            <output expression="&quot;Total amount of employees is, &quot;&amp;numberofemp&amp;&quot; Total amount paid is, &quot;&amp;totalpay" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
